@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Risks of Not Buying the Right Insurance - Health & Term Coverage Guide</title>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <h1>Insurance Guide</h1>
+            </div>
+            <div class="nav-links">
+                <a href="#introduction">Introduction</a>
+                <a href="#health">Health</a>
+                <a href="#term">Term Life</a>
+                <a href="#scenarios">Real Cases</a>
+                <a href="#calculator">Calculator</a>
+                <button class="cta-button">Get Insurance Review</button>
+            </div>
+            <div class="mobile-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="introduction" class="hero-section">
+        <div class="container">
+            <h1>Can Your Family Survive a Financial Emergency Without Insurance?</h1>
+            <p class="subtitle">8 out of 10 Indians are just one emergency away from a financial crisis - the protection gap that's putting millions at risk</p>
+            <div class="chart-container">
+                <canvas id="insurancePenetrationChart"></canvas>
+                <p class="chart-source">Source: IRDAI Annual Report 2022-23</p>
+            </div>
+            <div class="stats-container">
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>What's the average cost of critical illness treatment?</p>
+                            <span class="flip-hint">Click to find out</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>₹5,00,000+</h3>
+                            <p>In metro cities (2021), critical illness treatment costs can exceed ₹5 lakhs, with daily ICU charges around ₹25,000</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>How many Indians have health insurance?</p>
+                            <span class="flip-hint">Click to find out</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>31%</h3>
+                            <p>Only 31% of Indians have health insurance, far below the global average of 60%, leaving millions vulnerable to medical emergencies</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>How do most Indians pay medical bills?</p>
+                            <span class="flip-hint">Click to find out</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>70%</h3>
+                            <p>70% of medical expenses are paid out-of-pocket by individuals, often leading to financial distress or bankruptcy</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="flip-card">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <p>How many Indians are underinsured?</p>
+                            <span class="flip-hint">Click to find out</span>
+                        </div>
+                        <div class="flip-card-back">
+                            <h3>85%</h3>
+                            <p>85% of Indian families are underinsured, with an average coverage gap of 50 lakhs per family. This means most families have less than 50% of the coverage they need.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Health Insurance Section -->
+    <section id="health" class="health-section">
+        <div class="container">
+            <h2>The Rising Cost of Healthcare in India</h2>
+            
+            <!-- Medical Bankruptcy Card -->
+            <div class="risk-card">
+                <h3><i class="fas fa-hospital-user"></i> Medical Bankruptcy</h3>
+                <p>79% of Indian families who experienced a major health emergency went into debt or faced financial hardship.</p>
+            </div>
+
+            <!-- Impact Cards -->
+            <div class="health-impact">
+                <h3>Impact of Rising Healthcare Costs</h3>
+                <div class="impact-grid">
+                    <div class="impact-card" data-aos="fade-up">
+                        <i class="fas fa-procedures"></i>
+                        <h4>Hospital Charges</h4>
+                        <p>Average ICU costs have increased from ₹15,000 to ₹25,000 per day in 5 years</p>
+                    </div>
+                    <div class="impact-card" data-aos="fade-up" data-aos-delay="100">
+                        <i class="fas fa-pills"></i>
+                        <h4>Medicine Costs</h4>
+                        <p>Essential medication costs have risen by 15-20% annually</p>
+                    </div>
+                    <div class="impact-card" data-aos="fade-up" data-aos-delay="200">
+                        <i class="fas fa-user-md"></i>
+                        <h4>Treatment Expenses</h4>
+                        <p>Critical illness treatments now cost 40% more than in 2018</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Healthcare Inflation Chart -->
+            <div class="chart-container" data-aos="fade-up">
+                <h3 class="chart-title">Healthcare Cost Inflation in India (2017-2022)</h3>
+                <canvas id="healthcareInflationChart"></canvas>
+            </div>
+        </div>
+    </section>
+
+    <!-- Term Life Insurance Section -->
+    <section id="term" class="term-section">
+        <div class="container">
+            <h2>Term Life Insurance: The Shield Your Family Needs</h2>
+            <div class="content-grid">
+                <div class="visualization" data-aos="fade-right">
+                    <div class="protection-gap-visual">
+                        <canvas id="lifeInsuranceChart"></canvas>
+                        <div class="gap-highlights">
+                            <div class="highlight-stat">
+                                <i class="fas fa-shield-alt"></i>
+                                <h4>Protection Gap</h4>
+                                <p>₹25L+ per family</p>
+                            </div>
+                            <div class="highlight-stat">
+                                <i class="fas fa-chart-line"></i>
+                                <h4>Required Growth</h4>
+                                <p>15% yearly</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="text-content" data-aos="fade-left">
+                    <div class="term-benefits">
+                        <h3>Why Term Insurance is Critical</h3>
+                        <div class="benefit-grid">
+                            <div class="benefit-card">
+                                <i class="fas fa-umbrella"></i>
+                                <h4>Income Replacement</h4>
+                                <p>Ensures your family maintains their lifestyle even in your absence</p>
+                            </div>
+                            <div class="benefit-card">
+                                <i class="fas fa-graduation-cap"></i>
+                                <h4>Education Security</h4>
+                                <p>Secures your children's future education goals</p>
+                            </div>
+                            <div class="benefit-card">
+                                <i class="fas fa-home"></i>
+                                <h4>Debt Protection</h4>
+                                <p>Covers outstanding loans and mortgages</p>
+                            </div>
+                            <div class="benefit-card">
+                                <i class="fas fa-piggy-bank"></i>
+                                <h4>Legacy Planning</h4>
+                                <p>Creates a financial legacy for future generations</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="coverage-warning" data-aos="fade-up">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <p>The average Indian family needs 15× their annual income in life coverage, but most have less than 3×</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Real Scenarios Section -->
+    <section id="scenarios" class="scenarios-section">
+        <div class="container">
+            <h2>Real-Life Consequences of Inadequate Insurance</h2>
+            <div class="scenario-grid">
+                <div class="scenario-card" data-aos="fade-up">
+                    <div class="scenario-header">
+                        <i class="fas fa-heartbeat"></i>
+                        <h3>Suman's Medical Emergency</h3>
+                    </div>
+                    <div class="scenario-stats">
+                        <div class="stat-item">
+                            <i class="fas fa-hospital"></i>
+                            <h4>Hospital Bill</h4>
+                            <p>₹3,00,000</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-procedures"></i>
+                            <h4>ICU Charges/Day</h4>
+                            <p>₹25,000</p>
+                        </div>
+                        <div class="stat-item">
+                            <i class="fas fa-clock"></i>
+                            <h4>Recovery Time</h4>
+                            <p>3 months</p>
+                        </div>
+                    </div>
+                    <p class="scenario-description">A 45-year-old teacher faced with a ₹3 lakh emergency angioplasty bill. Without health insurance, she was forced to sell jewelry and take loans.</p>
+                    <div class="financial-impact">
+                        <h4>Financial Impact</h4>
+                        <div class="impact-breakdown">
+                            <div class="impact-item">
+                                <span class="impact-label">Savings Used</span>
+                                <span class="impact-value">₹1,00,000</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-label">Jewelry Sold</span>
+                                <span class="impact-value">₹1,20,000</span>
+                            </div>
+                            <div class="impact-item">
+                                <span class="impact-label">Personal Loan</span>
+                                <span class="impact-value">₹80,000</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="scenario-lesson highlight-box">
+                        <i class="fas fa-lightbulb"></i>
+                        <p>A basic health policy would have been insufficient. With rising healthcare costs and specific treatment requirements, Suman needed a comprehensive policy with higher coverage (₹10-15 lakhs) and no sub-limits. The right policy would have cost ₹20,000/year but prevented the financial crisis.</p>
+                    </div>
+                </div>
+                <div class="scenario-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="scenario-header">
+                        <i class="fas fa-user-shield"></i>
+                        <h3>Ravi's Family Story</h3>
+                    </div>
+                    <div class="case-content">
+                        <p>A 35-year-old marketing manager's sudden death left his family without financial support, struggling with debts and education expenses.</p>
+                        
+                        <canvas id="raviTimeline"></canvas>
+                        <p class="chart-caption">Term life insurance could have secured his family's financial future.</p>
+
+                        <div class="scenario-lesson highlight-box">
+                            <i class="fas fa-lightbulb"></i>
+                            <p>A basic ₹50 lakh term policy wasn't enough. His family needed:</p>
+                            <ul>
+                                <li>Coverage for 20+ years of living expenses</li>
+                                <li>Children's education & marriage costs</li>
+                                <li>Outstanding loan repayments</li>
+                                <li>Protection against inflation</li>
+                            </ul>
+                            <p class="lesson-highlight">The right coverage of ₹2 crores would have cost just ₹25,000/year but secured the family's entire future.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Calculator Section -->
+    <section id="calculator" class="calculator-section">
+        <div class="container">
+            <h2>Calculate Your Insurance Needs</h2>
+            <div class="calculator-grid">
+                <div class="calculator-card" data-aos="fade-right">
+                    <h3>Health Insurance Calculator</h3>
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label>Age</label>
+                            <input type="range" min="18" max="65" value="30" class="slider" id="healthAgeSlider">
+                            <span class="value">30</span>
+                        </div>
+                        <div class="input-group">
+                            <label>Family Size</label>
+                            <input type="range" min="1" max="6" value="2" class="slider" id="familySizeSlider">
+                            <span class="value">2</span>
+                        </div>
+                        <div class="input-group">
+                            <label>Medical History</label>
+                            <select id="medicalHistory">
+                                <option value="none">No History</option>
+                                <option value="minor">Minor Issues</option>
+                                <option value="major">Major Issues</option>
+                            </select>
+                        </div>
+                        <button class="calculate-button">Calculate Coverage</button>
+                        <div class="result" id="healthCoverageResult">
+                            Recommended Coverage: <span>₹0</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="calculator-card" data-aos="fade-left">
+                    <h3>Term Life Insurance Calculator</h3>
+                    <div class="calculator">
+                        <div class="input-group">
+                            <label>Age</label>
+                            <input type="range" min="18" max="65" value="30" class="slider" id="lifeAgeSlider">
+                            <span class="value">30</span>
+                        </div>
+                        <div class="input-group">
+                            <label>Monthly Expenses</label>
+                            <input type="number" id="monthlyExpenses" placeholder="Enter amount">
+                        </div>
+                        <div class="input-group">
+                            <label>Existing Life Cover</label>
+                            <input type="number" id="existingCover" placeholder="Enter amount">
+                        </div>
+                        <button class="calculate-button">Calculate Coverage</button>
+                        <div class="result" id="lifeCoverageResult">
+                            Recommended Coverage: <span>₹0</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Don't Gamble with Your Future</h2>
+            <p>Get a personalized insurance review and secure your family's financial future today</p>
+            <div class="cta-buttons">
+                <a href="#calculator" class="primary-button">Calculate Your Needs</a>
+                <button class="secondary-button">Speak to an Advisor</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Insurance Guide</h3>
+                    <p>Empowering Indians with insurance knowledge</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#introduction">Introduction</a>
+                    <a href="#health">Health Insurance</a>
+                    <a href="#term">Term Life</a>
+                    <a href="#scenarios">Real Cases</a>
+                    <a href="#calculator">Calculator</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Email: info@insuranceguide.com</p>
+                    <p>Phone: +91 1234567890</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Insurance Guide. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
+</body>
+</html> 
