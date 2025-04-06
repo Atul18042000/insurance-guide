@@ -1,17 +1,17 @@
 /* Global Styles */
 :root {
-    --primary-color: #1a365d;
-    --secondary-color: #2b6cb0;
+    --primary-color: #1e3a8a;
+    --secondary-color: #4285f4;
     --accent-color: #f6ad55;
     --text-color: #2d3748;
-    --light-bg: #f7fafc;
+    --light-bg: #f8fafc;
     --dark-bg: #1a202c;
     --success-color: #48bb78;
     --warning-color: #ed8936;
     --error-color: #f56565;
     --royal-gold: #b7791f;
     --royal-blue: #2c5282;
-    --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --card-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     --premium-gradient: linear-gradient(135deg, var(--royal-blue) 0%, var(--secondary-color) 100%);
     --royal-gradient: linear-gradient(135deg, var(--primary-color) 0%, var(--royal-blue) 100%);
     --light-text: #6b7280;
@@ -29,6 +29,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 body {
@@ -39,36 +40,36 @@ body {
 }
 
 .container {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 2rem;
-    width: 100%;
+    padding: 1rem;
     box-sizing: border-box;
 }
 
 /* Navigation */
 .navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
     background: white;
-    padding: 1rem 0;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
     z-index: 1000;
 }
 
 .nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 1rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
 }
 
 .logo h1 {
+    margin: 0;
     font-size: 1.5rem;
-    font-weight: 700;
     color: var(--primary-color);
 }
 
@@ -90,83 +91,60 @@ body {
 }
 
 .cta-button {
-    background: var(--royal-blue);
+    background: var(--secondary-color);
     color: white;
     padding: 0.75rem 1.5rem;
-    border-radius: 8px;
-    font-weight: 600;
-    transition: all 0.3s ease;
+    border-radius: 6px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
 }
 
 .cta-button:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
+    background: #3367d6;
 }
 
 .mobile-menu {
     display: none;
-    font-size: 1.5rem;
-    cursor: pointer;
 }
 
 /* Hero Section */
 .hero-section {
-    padding: 8rem 0 6rem;
-    background: linear-gradient(135deg, #1a365d 0%, #2b6cb0 100%);
+    background: var(--primary-color);
     color: white;
-    position: relative;
-    overflow: hidden;
-    min-height: 90vh;
+    padding: 6rem 1rem 2rem;
+    text-align: center;
+    min-height: 100vh;
     display: flex;
-    align-items: center;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: url('path/to/pattern.png') repeat;
-    opacity: 0.1;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .hero-content {
-    position: relative;
-    z-index: 2;
-    max-width: 1000px;
+    max-width: 800px;
     margin: 0 auto;
 }
 
-.hero-section h1 {
-    color: white;
-    font-size: 3.5rem;
+.hero-title {
+    font-size: 2rem;
     margin-bottom: 1.5rem;
     line-height: 1.2;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    font-weight: 800;
 }
 
-.hero-section .subtitle {
-    color: rgba(255, 255, 255, 0.95);
-    font-size: 1.5rem;
-    margin-bottom: 3rem;
-    max-width: 800px;
-    line-height: 1.6;
-    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+.hero-subtitle {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+    opacity: 0.9;
 }
 
 .chart-container {
     background: white;
-    border-radius: 16px;
-    padding: 2.5rem 2.5rem 1.5rem;
-    margin: 3rem auto;
-    max-width: 900px;
-    height: 400px !important;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    position: relative;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 2rem 0;
+    box-shadow: var(--card-shadow);
+    max-height: 300px;
 }
 
 .chart-source {
@@ -215,27 +193,18 @@ body {
 }
 
 .stat-card {
-    background: white;
-    padding: 2rem;
-    border-radius: 1rem;
-    box-shadow: var(--card-shadow);
     text-align: center;
-    transition: var(--transition);
+    padding: 2rem 1.5rem;
+    margin: 1rem 0;
+    background: white;
+    border-radius: 12px;
+    box-shadow: var(--card-shadow);
 }
 
-.stat-card:hover {
-    transform: translateY(-5px);
-}
-
-.stat-card h3 {
-    font-size: 2rem;
-    color: var(--primary-color);
-    margin-bottom: 1rem;
-}
-
-.stat-card p {
-    color: var(--light-text);
-    font-size: 1rem;
+.stat-number {
+    font-size: 2.5rem;
+    color: var(--secondary-color);
+    margin-bottom: 0.5rem;
 }
 
 /* Content Sections */
@@ -243,7 +212,7 @@ body {
 .term-section,
 .scenarios-section,
 .calculator-section {
-    padding: 6rem 0;
+    padding: 4rem 0;
 }
 
 .health-section,
@@ -401,14 +370,10 @@ body {
 
 .calculator-card {
     background: white;
-    padding: 2.5rem;
-    border-radius: 16px;
-    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
-    border: 1px solid rgba(226, 232, 240, 0.8);
-    overflow: hidden;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 1rem 0;
+    box-shadow: var(--card-shadow);
 }
 
 .calculator-card h3 {
@@ -602,20 +567,24 @@ select:focus {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .hero-section {
+        padding-top: 5rem;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1rem;
+    }
+
     .nav-links {
         display: none;
     }
 
     .mobile-menu {
         display: block;
-    }
-
-    .hero-section {
-        padding: 4rem 1rem;
-    }
-
-    .hero-section h1 {
-        font-size: 2rem;
     }
 
     .content-grid {
@@ -640,8 +609,9 @@ select:focus {
     }
 
     .chart-container {
-        padding: 1.5rem 1.5rem 1rem;
-        height: 300px !important;
+        padding: 1rem;
+        margin: 1rem 0;
+        max-height: 250px;
     }
     
     .visualization {
@@ -672,13 +642,21 @@ select:focus {
         left: 1.5rem;
         font-size: 0.75rem;
     }
+
+    .container {
+        padding: 0.75rem;
+    }
 }
 
 /* Flip Cards */
 .flip-card {
-    min-height: 250px;
-    perspective: 1000px;
-    margin-bottom: 1.5rem;
+    background: white;
+    border-radius: 12px;
+    padding: 1.5rem;
+    margin: 1rem 0;
+    box-shadow: var(--card-shadow);
+    cursor: pointer;
+    min-height: 200px;
 }
 
 .flip-card-inner {
@@ -688,9 +666,9 @@ select:focus {
     text-align: center;
     transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
     transform-style: preserve-3d;
-    min-height: 250px;
+    min-height: 200px;
     background: white;
-    border-radius: 16px;
+    border-radius: 12px;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
 }
 
@@ -703,13 +681,13 @@ select:focus {
     width: 100%;
     height: 100%;
     backface-visibility: hidden;
-    padding: 2.5rem;
-    border-radius: 16px;
+    padding: 1.5rem;
+    border-radius: 12px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    min-height: 250px;
+    min-height: 200px;
 }
 
 .flip-card-front {
@@ -915,4 +893,17 @@ select:focus {
     .case-content canvas {
         max-height: 180px;
     }
+}
+
+/* Ensure content doesn't overflow */
+img, canvas {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Fix for content overlapping */
+.content-section {
+    position: relative;
+    z-index: 1;
+    background: white;
 } 
