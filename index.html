@@ -15,7 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
 </head>
 <body>
-    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
@@ -27,69 +26,68 @@
                 <a href="#term">Term Life</a>
                 <a href="#scenarios">Real Cases</a>
                 <a href="#calculator">Calculator</a>
-                <button class="cta-button">Get Insurance Review</button>
             </div>
-            <div class="mobile-menu">
-                <i class="fas fa-bars"></i>
-            </div>
+            <button class="cta-button">Get Insurance Review</button>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <section id="introduction" class="hero-section">
+    <section class="hero-section">
         <div class="container">
-            <h1>Can Your Family Survive a Financial Emergency Without Insurance?</h1>
-            <p class="subtitle">8 out of 10 Indians are just one emergency away from a financial crisis - the protection gap that's putting millions at risk</p>
-            <div class="chart-container">
-                <canvas id="insurancePenetrationChart"></canvas>
-                <p class="chart-source">Source: IRDAI Annual Report 2022-23</p>
-            </div>
-            <div class="stats-container">
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>What's the average cost of critical illness treatment?</p>
-                            <span class="flip-hint">Click to find out</span>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>₹5,00,000+</h3>
-                            <p>In metro cities (2021), critical illness treatment costs can exceed ₹5 lakhs, with daily ICU charges around ₹25,000</p>
+            <div class="hero-content">
+                <h1 class="hero-title">Can You Survive a Financial Emergency Without Insurance?</h1>
+                <p class="hero-subtitle">8 out of 10 Indians are just one emergency away from a financial crisis - the protection gap that's putting millions at risk</p>
+                
+                <div class="chart-container">
+                    <canvas id="insurancePenetrationChart"></canvas>
+                </div>
+
+                <div class="stats-grid">
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>What's the average cost of critical illness treatment?</h3>
+                                <p>Click to find out</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>₹8-12 Lakhs</h3>
+                                <p>Average cost for critical illnesses like cancer, heart surgery, or organ transplant</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>How many Indians have health insurance?</p>
-                            <span class="flip-hint">Click to find out</span>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>31%</h3>
-                            <p>Only 31% of Indians have health insurance, far below the global average of 60%, leaving millions vulnerable to medical emergencies</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>How do most Indians pay medical bills?</p>
-                            <span class="flip-hint">Click to find out</span>
-                        </div>
-                        <div class="flip-card-back">
-                            <h3>70%</h3>
-                            <p>70% of medical expenses are paid out-of-pocket by individuals, often leading to financial distress or bankruptcy</p>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>How many Indians have health insurance?</h3>
+                                <p>Click to find out</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>31%</h3>
+                                <p>Only 31% of Indians have health insurance, far below the global average of 60%, leaving millions vulnerable to medical emergencies</p>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="flip-card">
-                    <div class="flip-card-inner">
-                        <div class="flip-card-front">
-                            <p>How many Indians are underinsured?</p>
-                            <span class="flip-hint">Click to find out</span>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>How do most Indians pay medical bills?</h3>
+                                <p>Click to find out</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>70%</h3>
+                                <p>70% of medical expenses are paid out-of-pocket by individuals, often leading to financial distress or bankruptcy</p>
+                            </div>
                         </div>
-                        <div class="flip-card-back">
-                            <h3>85%</h3>
-                            <p>85% of Indian families are underinsured, with an average coverage gap of 50 lakhs per family. This means most families have less than 50% of the coverage they need.</p>
+                    </div>
+                    <div class="flip-card">
+                        <div class="flip-card-inner">
+                            <div class="flip-card-front">
+                                <h3>How many Indians are underinsured?</h3>
+                                <p>Click to find out</p>
+                            </div>
+                            <div class="flip-card-back">
+                                <h3>85%</h3>
+                                <p>85% of Indian families are underinsured, with an average coverage gap of 50 lakhs per family. This means most families have less than 50% of the coverage they need.</p>
+                            </div>
                         </div>
                     </div>
                 </div>
